@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+        <!-- JavaScript Bundle with Popper -->
+        <script   script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>      
+    <title>Document</title>
+    <style>
+    
+        /* Navbar Head Başlangıç */
+        .language-select{
+            display: flex;
+            
+        }
+        .uyelik {
+            display: flex; justify-content: space-between; width: 36%;
+        }
+        
+        .uyelik button {
+            margin: 5px 5px;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        #translate {
+            display: block;
+            outline: none;
+            font-weight: 700;
+            font-size: larger;
+            font-family: 'Fjalla One', sans-serif;
+        }
+
+        #translate, .icon{
+            background-color: #ffcb04;
+            color: black;
+            font-size: 15px;
+            border: none;
+            display: flex;
+        }
+
+        #translate option {
+            outline: none;
+            background-color: black;
+            color: white;
+            padding-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #0d6efd;
+            --bs-btn-border-color: #0d6efd;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #0b5ed7;
+            --bs-btn-hover-border-color: #0a58ca;
+            --bs-btn-focus-shadow-rgb: 49, 132, 253;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #0a58ca;
+            --bs-btn-active-border-color: #0a53be;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #0d6efd;
+            --bs-btn-disabled-border-color: #0d6efd;
+        }  
+    
+        /* Navbar Head Bitiş */
+
+
+        /* Panel Başlangıç */
+
+        .panel{
+            background-color: black;
+            width: 100%;
+            height: 13vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .panel-container{
+            width: 66.30%;
+            height: 13vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: sticky;
+            background-color: black;
+            z-index: 1;
+            top: 0;
+        }
+        #pc-input1, #pc-input2{
+            width: 20.22vw;
+            height: 6.1vh;
+            padding-left: 1.5vw;
+        }
+        .panel-container button{
+            width: 19.87vw;
+            height: 6.1vh;
+            background-color: #ffcb03;
+            color: black;
+            font-weight: 600;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .panel-container button a{
+            text-decoration: none;
+            color: black;
+        }
+        .panel-container ::placeholder{
+            font-weight: 600;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+
+        /* Panel Bitiş */
+
+
+        /* bigContainer Başlangıç */
+
+        .bigContainer{
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         
+        }
+
+        .headContainer{
+            width: 100%;
+            padding-top: 5vh;
+            
+        }
+        .headImg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .headImg img{
+            width: 66.30%;
+            height: 58vh;  
+        }
+
+        /* Card Başlangıç */
+
+        .cards{
+            width: 66.5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top: 7vh;
+        }
+        .card-body p{
+           font-size: 53px; 
+        }
+
+        .card-img{
+            height: 80%;
+            display: flex;
+        }
+        .card-img1{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+            margin-top: 0;
+        }
+        .card-img2{
+            display: flex;
+            width: 3vw;
+            height: 3vh;
+            padding-right: 0.5vw;
+        }
+
+        .card-text{
+            width: 100%;
+        }
+
+        .card a{
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+
+        /* Card Bitiş */
+
+        /* Footer Başlangıç */
+
+
+        /* Footer Bitiş */
+        .footer{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4vh;
+        }
+        .footer-img img{
+            width: 22%;
+        }
+        .footer-text1{
+            margin-top: 3vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-text1 h1{
+            width: 55%;
+            color: white;
+            text-align: center;
+            font-size: 2.8vmin;
+            font-weight: 600;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 4.3vh;
+        }
+        .footer-market-icons{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4vh;
+        }
+        .icons{
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .icons div{
+            width: 30%;
+            height: 5vh;
+        }
+        .icons img{
+            width: 100%;
+            height: 100%;
+        }
+        .footer-social-icons{
+            margin-top: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-social-icons ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .footer-social-icons ul li{
+            padding: 0 0.4vw;
+        }
+
+        .footer-text2{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4vh;
+            padding-bottom: 10vh;
+        }
+
+        .footer-text2-inner{
+            width: 66%;
+            background-color: rgb(9,9,9);
+            height: 8vh;
+            color: #ffcb03;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.8vmin;
+        }
+        .footer-text2-inner a{
+            text-decoration: none;
+            color: #ffcb03;
+        }
+
+        .footer-cookies{
+            margin-top: 7vh;
+            width: 90%;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            bottom: -0.5vh;
+            background-color: black;
+            z-index: 1;
+        }
+    
+        .cookies-text{
+            width: 88%;
+            color: white;
+        }
+        .cookies-text a{
+            text-decoration: none;
+            color: white;
+        }
+        .cookies-button{
+            width: 11%;
+        }
+        .cookies-button button{
+            width: 100%;
+            height: 3.8vh;
+            background-color: #ffcb03;
+            color: black;
+            font-size: 1.8vmin;
+            font-weight: 600;
+        }
+
+        .cookies-button button:hover {
+            background-color: rgb(255,241,43);
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .sticky + .bigContainer {
+            padding-top: 60px;
+            
+        }
+
+
+
+        /* bigContainer Bitiş */
+
+
+
+       
+    </style>
+
+  
+
+
+
+</head>
+<body>
+
+   
+        <div style="background-color: #ffcb03;">
+            <header class="container-fluid" style=" display: flex; align-items: center; background-color: #ffcb03; height: 14vh; width: 90%; margin: auto; justify-content: space-evenly;">
+                
+                    <div>
+                        <a href="#"><img src="https://wimage.exxen.com/img/landing/logo-web.svg" alt=""></a>
+                    </div>
+                    <div class="uyelik">
+                        <a href="uyeol.html"><button type="button" class="btn btn-dark" style="width:280px; height: 56px; color: #ffcb03; background-color: black; border-radius: 0; ">EXXENSPOR Ticari Üye Ol</button></a>
+                        <a href="uyegiris.html"><button type="button" class="btn btn-warning" style="width:130px; height: 56px; border: 1px solid black; background-color: #ffcb03; border-radius: 0;">Üye Girişi</button></a>
+            
+                        <div class="language-select">
+                            <div style="display: flex; align-items: center; padding: 0 0.5vw;"> <img src="https://wimage.exxen.com/img/lang-icon.svg" alt="">
+                            </div>
+
+                            <select name="" id="translate">
+                                
+                                <option value="TR">Türkçe</option>
+                                <option value="EN">English</option>
+                                <option value="AR">الحقيقي</option>
+                                <option value="SP">Espanol</option>
+                            </select>
+                        </div>
+                    </div>
+            </header>
+        </div>
+
+        <div id="navbar" class="panel">
+            <div class="panel-container">
+                <input id="pc-input1" onclick="myFunction1()" type="text" placeholder="Ad Soyadı">
+                <input id="pc-input2" onclick="myFunction2()" type="text" placeholder="E-Posta Adresi">
+                <a href="uyeol.html"><button type="submit">Üye Ol</button></a>
+            </div>
+        </div>
+
+        <div class="bigContainer">
+            
+            <div class="headContainer">
+                <a href="">
+                    <div class="headImg">
+                        <img src="https://image.exxen.com/landing/14gun.jpg" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class="cards">
+                
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/dominik-te-gormedikleriniz-bilmedikleriniz/46040">
+                        <div class="card-img">
+                            
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/G/Sq/46040/Poster.jpg?v=637895427872684742); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text card-fs" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Dominik'te Görmedikleriniz Bilmedikleriniz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/ilginc-bazi-olaylar/34589">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/n/fY/34589/Poster.jpg?v=637896274802738298); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            İlginç Bazı Olaylar</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/sampiyonlar-ligi/40034">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/Y/Nl/40034/Poster.jpg?v=637656647853011273); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Şampiyonlar Ligi</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/avrupa-ligi/40039">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image4.exxen.com/content/E/nl/40039/Poster.jpg?v=637656707497190085); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Avrupa Ligi</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/avrupa-konferans-ligi/40040">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image5.exxen.com/content/s/pL/40040/Poster.jpg?v=637656738136316293); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Avrupa Konferans Ligi</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/ask-kumardir/44282">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/L/-m/44282/Poster.jpg?v=637896285240920615); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Aşk Kumardır</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/leyla-ile-mecnun/39508">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/9/es/39508/Poster.jpg?v=637896277713183190); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Leyla ile Mecnun</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/gibi/22396">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/s/2O/22396/Poster.jpg?v=637822858134772532); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Gibi</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/arabeskin-asik-kadinlari/43601">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image4.exxen.com/content/u/HV/43601/Poster.jpg?v=637896292593741321); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Arabeskin Aşık Kadınları</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/konusanlar/22377">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image5.exxen.com/content/n/lC/22377/Poster.jpg?v=637895414392789029); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Konuşanlar</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/sihirli-annem/22369">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/p/3-/22369/Poster.jpg?v=637871322646445816); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Sihirli Annem</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/turkiye-deki-seri-katiller/41756">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/Q/sE/41756/Poster.jpg?v=637896300138649554); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Türkiye'deki Seri Katiller</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/survivor-tv-de-yok/23328">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/B/g1/23328/Poster.jpg?v=637806038823831053); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Survivor TV'de Yok</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/o-ses-turkiye-rap/34584">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image4.exxen.com/content/d/gp/34584/Poster.jpg?v=637896289485090907); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            O Ses Türkiye Rap</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/vahsi-seyler/22406">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image5.exxen.com/content/q/xB/22406/Poster.jpg?v=637476282728230545); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Vahşi Şeyler</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/bir-yeralti-sit-com-u/34597">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/c/tL/34597/Poster.jpg?v=637896288911911485); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Bir Yeraltı Sit-com'u</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/seref-bey/22357">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/B/zW/22357/Poster.jpg?v=637896295127287445); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Şeref Bey</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/super-1-takim/23470">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/n/C6/23470/Poster.jpg?v=637786558569488448); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Süper 1 Takım</p>
+                        </div>
+                    </a>    
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/movie/nusaybin-cinleri/23932">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image4.exxen.com/content/V/DZ/23932/Poster.jpg?v=637473766642105995); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Nusaybin Cinleri</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/alper-rende-ile-kacis/22828">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image5.exxen.com/content/5/1b/22828/Poster.jpg?v=637750264972920000); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Alper Rende ile Kaçış</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/enes-batur-la-bulusma/22780">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/J/Ca/22780/Poster.jpg?v=637744230547259653); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Enes Batur'la Buluşma</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/katarsis/22465">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/E/a9/22465/Poster.jpg?v=637586985635654428); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Katarsis</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/movie/kral-sakir-cumburlop/36389">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/o/NY/36389/Poster.jpg?v=637559328844825934); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Kral Şakir Cumburlop</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/tolgshow-filtresiz/22481">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image4.exxen.com/content/j/fv/22481/Poster.jpg?v=637726055819673373); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Tolgshow Filtresiz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/olum-zamani/34598">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image5.exxen.com/content/R/ex/34598/Poster.jpg?v=637726441222283466); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Ölüm Zamanı</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/zeynep-bastik-ve-konuklari/22478">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image1.exxen.com/content/f/XV/22478/Poster.jpg?v=637895430751456456); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Zeynep Bastık ve Konukları</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/hukumsuz/22771">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image2.exxen.com/content/k/zQ/22771/Poster.jpg?v=637896290452503744); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            Hükümsüz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card" style="width: 21%; height: 45.4vh; border: none;">
+                    <a href="https://www.exxen.com/tr/detail/serie/iste-bu-benim-masalim/22823">
+                        <div class="card-img">
+                            <div class="card-img1" style="background-image: url(https://image3.exxen.com/content/5/83/22823/Poster.jpg?v=637896292008635192); background-size: cover;">
+                                <img class="card-img2" src="https://wimage.exxen.com/img/landing/button-detail.svg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body" style="background-color: black; color: whitesmoke; height: 20%; width: 100%;">
+                        <p class="card-text" style="font-size: 1.43vmin; font-weight: 800; text-align: center; 
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        width: 100%; height: 100%;">
+                            İşte Bu Benim Masalım</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer">
+
+                <div class="footer-img">
+                    <img src="https://wimage.exxen.com/img/landing/devices.svg" alt="">
+                </div>
+
+                <div class="footer-text1">
+                    <h1>
+                    Hemen üye ol, cepte, tablette, bilgisayarda, istediğin zaman, istediğin yerde exxen.com, Google Play, 
+                        AppGallery, App Store, Apple TV ve Android TV'den izlemeye başla.</h1>
+                </div>
+
+                <div class="footer-market-icons">
+                    <div class="icons">
+
+                        <div> 
+                            <a href="#"> 
+                                <img src="https://wimage.exxen.com/img/app-store-2.svg" alt=""> 
+                            </a> 
+                        </div>
+
+                        <div>
+                            <a href="#"> 
+                                <img src="https://wimage.exxen.com/img/google-play@3x.png" alt=""> 
+                            </a> 
+                        </div>
+
+                        <div> 
+                            <a href="#"> 
+                                <img src="https://wimage.exxen.com/img/landing/huawei-app-gallery@3x.png" alt=""> 
+                            </a> 
+                        </div> 
+                    </div>
+                    
+                </div>
+
+                <div class="footer-social-icons">
+                    <ul>
+                        <li> <a href="#"> <img src="https://wimage.exxen.com/img/landing/instagram.svg" alt=""> </a> </li>
+                        <li> <a href="#"> <img src="https://wimage.exxen.com/img/landing/facebook.svg" alt=""> </a> </li>
+                        <li> <a href="#"> <img src="https://wimage.exxen.com/img/landing/twitter.svg" alt=""> </a> </li>
+                        <li> <a href="#"> <img src="https://wimage.exxen.com/img/landing/youtube.svg" alt=""> </a> </li>
+                        <li> <a href="#"> <img src="https://wimage.exxen.com/img/landing/tiktok.svg" alt=""> </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-text2">
+                    <div class="footer-text2-inner">
+                        <a href="#"><span>Exxen Yardım Merkezi</span></a>
+                    </div>
+                </div>
+
+                <div class="footer-cookies">
+
+                    <div class="cookies-text">
+                        <span>Size daha iyi hizmet sunabilmek için çerezler kullanıyoruz. Detaylı bilgiye Çerez Politikası sayfamızdan erişebilirsiniz. <a href="#"> <ins>Detaylı bilgi</ins></a> </span>
+                    </div>
+                    <div class="cookies-button">
+                        <button>Tamam</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+        </div>
+    
+
+
+        <script>
+
+            function myFunction1(){
+                document.getElementById("pc-input1").style.border = "4px solid #ffcb03"
+                document.getElementById("pc-input2").removeAttribute("style");
+            }
+
+            function myFunction2(){
+                document.getElementById("pc-input2").style.border = "4px solid #ffcb03"
+                document.getElementById("pc-input1").removeAttribute("style");
+            }
+            
+
+            window.onscroll = function() {myFunction()};
+
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+        
+        </script>
+   
+</body>
+</html>
